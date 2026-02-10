@@ -35,4 +35,4 @@ Images with EXIF data get focal length auto-calculated when using the Load Image
 Thanks to Apple for releasing SHARP as open source.
 ## Guides
 
-- [Installer PlayCanvas Engine v2.15.0 (script + manuel)](docs/install_playcanvas_engine_v2.15.0.md)
+- [Installer PlayCanvas Engine v2.15.0 (script auto/npm/cdn/release)](docs/install_playcanvas_engine_v2.15.0.md)

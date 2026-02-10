@@ -1,38 +1,38 @@
 # Installer PlayCanvas Engine v2.15.0
 
-Si tu veux une installation immédiate, exécute simplement:
+## Installation directe (recommandée)
+
+Le script supporte 4 modes:
+
+- `auto` (défaut): npm -> CDN -> release GitHub,
+- `npm`: package npm,
+- `cdn`: téléchargement direct de `playcanvas.js`,
+- `release`: téléchargement de l'archive source GitHub.
 
 ```bash
-bash scripts/install_playcanvas_engine_v2.15.0.sh <chemin-du-projet-js>
+bash scripts/install_playcanvas_engine_v2.15.0.sh <chemin-projet> auto
 ```
 
-Exemple:
+Exemples:
 
 ```bash
-bash scripts/install_playcanvas_engine_v2.15.0.sh /tmp/mon-projet-playcanvas
+bash scripts/install_playcanvas_engine_v2.15.0.sh /tmp/mon-projet auto
+bash scripts/install_playcanvas_engine_v2.15.0.sh /tmp/mon-projet npm
+bash scripts/install_playcanvas_engine_v2.15.0.sh /tmp/mon-projet cdn
+bash scripts/install_playcanvas_engine_v2.15.0.sh /tmp/mon-projet release
 ```
 
-Le script:
+## Résultat attendu par mode
 
-- initialise `package.json` si absent,
-- installe `playcanvas@2.15.0` avec une version exacte,
-- vérifie la version installée.
+- `npm`: dépendance `playcanvas@2.15.0` dans `node_modules`.
+- `cdn`: fichier `vendor/playcanvas-2.15.0.js`.
+- `release`: archive et sources extraites dans `vendor/`.
 
-## Installation manuelle (alternative)
+## Vérification
 
-Dans ton projet:
+- npm: `npm ls playcanvas`
+- cdn/release: vérifier les fichiers dans `vendor/`.
 
-```bash
-npm install --save-exact playcanvas@2.15.0
-npm ls playcanvas
-```
-
-## CDN (sans npm)
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/playcanvas@2.15.0/build/playcanvas.js"></script>
-```
-
-Source release officielle:
+## Source officielle
 
 - https://github.com/playcanvas/engine/releases/tag/v2.15.0
